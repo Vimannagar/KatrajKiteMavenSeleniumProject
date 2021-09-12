@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="5763" started-at="2021-09-08T08:53:55 IST" finished-at="2021-09-08T08:54:01 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="5763" started-at="2021-09-08T08:53:55 IST" finished-at="2021-09-08T08:54:01 IST">
+      <class name="testcases.DashBoardTest">
+        <test-method status="PASS" signature="createObject()[pri:0, instance:testcases.DashBoardTest@67784306]" name="createObject" is-config="true" duration-ms="4" started-at="2021-09-08T08:53:57 IST" finished-at="2021-09-08T08:53:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="searchShares()[pri:2, instance:testcases.DashBoardTest@67784306]" name="searchShares" duration-ms="4212" started-at="2021-09-08T08:53:57 IST" finished-at="2021-09-08T08:54:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchShares -->
+      </class> <!-- testcases.DashBoardTest -->
+      <class name="testcases.LoginTest">
+        <test-method status="PASS" signature="initBrowser()[pri:0, instance:testcases.LoginTest@6536e911]" name="initBrowser" is-config="true" duration-ms="10890" started-at="2021-09-08T08:53:44 IST" finished-at="2021-09-08T08:53:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method status="PASS" signature="createObject()[pri:0, instance:testcases.LoginTest@6536e911]" name="createObject" is-config="true" duration-ms="117" started-at="2021-09-08T08:53:55 IST" finished-at="2021-09-08T08:53:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method status="PASS" signature="login()[pri:1, instance:testcases.LoginTest@6536e911]" name="login" duration-ms="1322" started-at="2021-09-08T08:53:55 IST" finished-at="2021-09-08T08:53:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
