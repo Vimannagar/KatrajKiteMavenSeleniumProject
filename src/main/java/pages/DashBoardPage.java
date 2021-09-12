@@ -30,7 +30,13 @@ public class DashBoardPage {
 	private WebElement buybutton;		
 
 	
+@FindBy(xpath = "//*[@class='message']")
+private WebElement confirmationmessage;	
 	
+	
+	
+@FindBy(xpath = "//*[@type='submit']")
+private WebElement buysharebutton;	
 	
 	
 
@@ -48,6 +54,20 @@ public class DashBoardPage {
 		
 		act.sendKeys(searchinstrument, Keys.ENTER).build().perform();
 		buybutton.click();
+		
+		
+		
+		
+		
+		
+	}
+	
+	public void buySharesWithMarketClose()
+	{
+		buysharebutton.click();
+		
+		String text = confirmationmessage.getText();
+		System.out.println(text);
 		
 		
 	}

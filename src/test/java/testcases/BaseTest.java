@@ -19,10 +19,17 @@ import pages.LoginPage;
 
 public class BaseTest {
 
-	static WebDriver driver;
-	LoginPage lp;
 
-	DashBoardPage db;
+	
+	
+	
+	public static WebDriver driver;
+	public LoginPage lp;
+	
+	public Properties prop;
+	public FileInputStream fis;
+public	String path;
+	public DashBoardPage db;
 
 	@BeforeSuite
 	public void initBrowser() throws IOException {
@@ -44,9 +51,9 @@ public class BaseTest {
 //		options.addArguments("--headless");
 		
 		driver = new ChromeDriver(options);
-		String path = System.getProperty("user.dir") + "//config.properties";
-		FileInputStream fis = new FileInputStream(path);
-		Properties prop = new Properties();
+		 path = System.getProperty("user.dir") + "//config.properties";
+		 fis = new FileInputStream(path);
+		 prop = new Properties();
 
 		prop.load(fis);
 

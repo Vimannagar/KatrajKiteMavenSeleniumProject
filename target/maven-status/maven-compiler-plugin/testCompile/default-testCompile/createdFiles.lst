@@ -1,3 +1,6 @@
+utility\TakeScreenShotOfApp.class
 testcases\LoginTest.class
+extentlisteners\ExtentListeners.class
+extentlisteners\ExtentReportGen.class
 testcases\BaseTest.class
 testcases\DashBoardTest.class

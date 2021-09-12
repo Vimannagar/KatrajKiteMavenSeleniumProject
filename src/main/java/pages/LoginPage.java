@@ -7,10 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BaseClass {
 
 	WebDriver driver;
+	WebDriverWait wait;
 
 	@FindBy(xpath = "//*[@id='userid']")
 	private WebElement username;
@@ -38,6 +41,8 @@ public class LoginPage extends BaseClass {
 	public LoginPage(WebDriver driver) throws IOException {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
+		wait = new WebDriverWait(driver, 60);
 
 	}
 
@@ -49,7 +54,8 @@ public class LoginPage extends BaseClass {
 	
 	public void enterPin()
 	{
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.elementToBeClickable(pin));
+		
 		pin.sendKeys(prop.getProperty("pin"));
 		continuebutton.click();
 	}
