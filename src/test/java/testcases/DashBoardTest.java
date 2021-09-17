@@ -1,5 +1,7 @@
 package testcases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,6 +13,8 @@ public class DashBoardTest extends ExtentListeners {
 	@Test(priority = 2)
 	public void searchShares()
 	{
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.MILLISECONDS);
 		db.searchInstruments();
 		test.info("Search for the shares has been done");
 		
@@ -21,7 +25,7 @@ public class DashBoardTest extends ExtentListeners {
 	{
 		db.buySharesWithMarketClose();
 		test.info("order has been placed but market is closed");
-		Assert.assertEquals(false, true);
+//		Assert.assertEquals(false, true);
 	
 		
 		

@@ -3,6 +3,7 @@ package pages;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,9 +16,11 @@ public class LoginPage extends BaseClass {
 	WebDriver driver;
 	WebDriverWait wait;
 
-	@FindBy(xpath = "//*[@id='userid']")
-	private WebElement username;
+//	@FindBy(xpath = "//*[@id='userid']")
+//	private WebElement usernamew;
 
+private By username	= By.xpath("//*[@id='userid']");
+	
 	@FindBy(xpath = "//*[@id='password']")
 	private WebElement password;
 
@@ -47,7 +50,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	public void loginToApp() {
-		username.sendKeys(prop.getProperty("username"));
+		driver.findElement(username).sendKeys(prop.getProperty("username"));
 		password.sendKeys(prop.getProperty("password"));
 		loginbutton.click();
 	}

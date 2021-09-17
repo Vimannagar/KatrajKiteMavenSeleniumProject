@@ -6,24 +6,19 @@ import java.io.IOException;
 import java.util.Properties;
 
 public abstract class BaseClass {
-	
+
 	Properties prop;
 	FileInputStream fis;
-	
+
 	String path;
-	
-	
-	public BaseClass() throws IOException
-	{
-		 path = System.getProperty("user.dir") + "//config.properties";
+
+	public BaseClass() throws IOException {
+		path = System.getProperty("user.dir") + "//config.properties";
 		fis = new FileInputStream(path);
-		 prop = new Properties();
+		prop = new Properties();
 
 		prop.load(fis);
 
-		
-		
 	}
-	
 
 }
